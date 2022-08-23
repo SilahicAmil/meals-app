@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 import CategoriesScreen from "./screens/categories-screen";
 import MealDetailScreen from "./screens/meal-detail-screen";
@@ -19,7 +19,7 @@ export default function App() {
           screenOptions={{
             headerStyle: { backgroundColor: "#bdaa77" },
             headerTintColor: "white",
-            contentStyle: { backgroundColor: "#edd491" },
+            contentStyle: { backgroundColor: "white" },
           }}
         >
           <Stack.Screen
