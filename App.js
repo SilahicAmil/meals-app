@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 
 import CategoriesScreen from "./screens/categories-screen";
+import MealDetailScreen from "./screens/meal-detail-screen";
 import MealsOverviewScreen from "./screens/meals-overview-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
@@ -11,7 +12,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Meals Categories"
@@ -25,16 +26,18 @@ export default function App() {
             name="MealsCategories"
             component={CategoriesScreen}
             options={{
-              title: " Meals Categories",
+              title: "All Categories",
             }}
           />
           <Stack.Screen
             name="MealsOverview"
             component={MealsOverviewScreen}
-            options={{
-              title: "Meals Overview",
-            }}
+            // options={({ route, navigation }) => {
+            //   const catId = route.params.categoryId;
+            //   return { title: catId };
+            // }}
           />
+          <Stack.Screen name="MealDetail" component={MealDetailScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
