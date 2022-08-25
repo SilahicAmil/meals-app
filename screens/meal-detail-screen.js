@@ -21,7 +21,7 @@ const MealDetailScreen = ({ route, navigation }) => {
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
   const headerButtonPressHandler = () => {
-    Alert.alert("Testing Favorite Button");
+    Alert.alert("Testing Button");
   };
 
   useLayoutEffect(() => {

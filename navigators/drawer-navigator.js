@@ -11,6 +11,9 @@ const DrawerNavigator = () => {
       screenOptions={{
         headerStyle: { backgroundColor: "#bdaa77" },
         headerTintColor: "white",
+        swipeEnabled: true,
+        drawerHideStatusBarOnOpen: true,
+        drawerStatusBarAnimation: "fade",
       }}
     >
       <Drawer.Screen

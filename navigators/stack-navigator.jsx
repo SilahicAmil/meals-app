@@ -15,6 +15,7 @@ const StackNavigator = () => {
           headerStyle: { backgroundColor: "#bdaa77" },
           headerTintColor: "white",
           contentStyle: { backgroundColor: "white" },
+          headerBackTitle: "Back",
         }}
       >
         <Stack.Screen
@@ -27,7 +28,11 @@ const StackNavigator = () => {
         />
 
         <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} />
-        <Stack.Screen name="MealDetail" component={MealDetailScreen} />
+        <Stack.Screen
+          name="MealDetail"
+          component={MealDetailScreen}
+          options={{ title: "Meal Details" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
