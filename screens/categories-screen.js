@@ -1,4 +1,4 @@
-import { FlatList, ScrollView, Text, View } from "react-native";
+import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/category-grid-tile";
@@ -23,13 +23,21 @@ const CategoriesScreen = ({ navigation }) => {
   };
 
   return (
-    <FlatList
-      data={CATEGORIES}
-      keyExtractor={(item) => item.id}
-      renderItem={renderCategoryItem}
-      numColumns={numColumns}
-    />
+    <View style={styles.rootContainer}>
+      <FlatList
+        data={CATEGORIES}
+        keyExtractor={(item) => item.id}
+        renderItem={renderCategoryItem}
+        numColumns={numColumns}
+      />
+    </View>
   );
 };
 
 export default CategoriesScreen;
+
+const styles = StyleSheet.create({
+  rootContainer: {
+    paddingBottom: 16,
+  },
+});
