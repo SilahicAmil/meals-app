@@ -1,4 +1,5 @@
 import {
+  Alert,
   Button,
   Image,
   ScrollView,
@@ -20,7 +21,7 @@ const MealDetailScreen = ({ route, navigation }) => {
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
   const headerButtonPressHandler = () => {
-    console.log("pressed");
+    Alert.alert("Testing Favorite Button");
   };
 
   useLayoutEffect(() => {

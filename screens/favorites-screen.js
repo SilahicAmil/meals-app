@@ -1,11 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
+import { createContext, useState } from "react";
 
 const FavoritesScreen = () => {
-  return (
-    <View style={styles.test}>
-      <Text>This is a dummy test screen!</Text>
-    </View>
-  );
+  return <View style={styles.test}></View>;
 };
 
 export default FavoritesScreen;
