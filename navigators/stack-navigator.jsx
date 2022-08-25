@@ -1,4 +1,4 @@
-import DrawerNavigator from "../navigator/drawer-navigator";
+import DrawerNavigator from "./drawer-navigator";
 import MealDetailScreen from "../screens/meal-detail-screen";
 import MealsOverviewScreen from "../screens/meals-overview-screen";
 import { NavigationContainer } from "@react-navigation/native";
